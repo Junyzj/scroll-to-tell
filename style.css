@@ -1,0 +1,78 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+section {
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+p {
+    font-size: 22px;
+}
+
+.beans {
+    background-color: #6f4e37;
+}
+
+.grinding {
+    background-color: #a47551;
+}
+
+.brewing {
+    background-color: #c89f72;
+    color: #352318;
+}
+
+.coffee {
+    background-color: #4a2c22;
+}
+
+.scroll-link {
+    display: inline-block;
+    margin-top: 40px;
+    color: white;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+/* Reveal the text as the user scrolls */
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@supports (animation-timeline: view()) {
+    section h2,
+    section p {
+        animation: reveal linear both;
+        animation-timeline: view();
+        animation-range: entry 0% cover 35%;
+    }
+}
