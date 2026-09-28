@@ -30,21 +30,46 @@ p {
     font-size: 22px;
 }
 
+/* Background images for the four steps */
 .beans {
     background-color: #6f4e37;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url("images/beans.jpg");
 }
 
 .grinding {
     background-color: #a47551;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url("images/grinding.jpg");
 }
 
 .brewing {
     background-color: #c89f72;
-    color: #352318;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url("images/brewing.jpg");
 }
 
 .coffee {
     background-color: #4a2c22;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url("images/coffee.jpg");
+}
+
+.beans,
+.grinding,
+.brewing,
+.coffee {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .scroll-link {
